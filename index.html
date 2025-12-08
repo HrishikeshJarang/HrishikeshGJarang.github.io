@@ -1,84 +1,183 @@
 <!DOCTYPE html>
-body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-background: #f7f7f7;
-color: #333;
-}
-header {
-background: #111;
-color: white;
-padding: 2rem;
-text-align: center;
-}
-.container {
-width: 90%;
-max-width: 1000px;
-margin: 2rem auto;
-}
-h2 {
-border-left: 5px solid #111;
-padding-left: 10px;
-}
-.project {
-background: white;
-padding: 1.5rem;
-margin-bottom: 2rem;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.project img {
-width: 100%;
-max-width: 500px;
-border-radius: 8px;
-margin-top: 10px;
-}
-footer {
-text-align: center;
-padding: 1rem;
-margin-top: 2rem;
-background: #111;
-color: white;
-}
-</style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Product Engineering Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      background: #111;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    header {
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      background: linear-gradient(to bottom, #111, #333);
+      color: white;
+    }
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 2rem auto;
+    }
+
+    h2 {
+      border-left: 5px solid #111;
+      padding-left: 10px;
+      margin-top: 3rem;
+      font-size: 1.7rem;
+    }
+
+    /* Project Cards */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .project {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .project img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 0.5rem 0;
+    }
+
+    /* Contact Section */
+    #contact p {
+      margin: 0.3rem 0;
+    }
+    #contact a {
+      color: #111;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 3rem;
+      background: #111;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-<h1>My Product Engineering Portfolio</h1>
-<p>Mechanical Design • Product Engineering • CAD • FEA • DFM</p>
-</header>
+  <nav>
+    <div class="logo"><strong>Portfolio</strong></div>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
+  <header>
+    <h1>My Product Engineering Portfolio</h1>
+    <p>Mechanical Design • CAD • Sheet Metal • Die Casting • FEA • Product Engineering</p>
+  </header>
 
-<div class="container">
+  <div class="container">
 
+    <h2 id="about">About Me</h2>
+    <p>I am a Product Engineer with hands-on experience in mechanical design, structural analysis, fabrication, weldments, sheet metal, die casting, and CAD modeling. I convert real-world engineering problems into manufacturable solutions. Below are some of the product engineering projects I have completed.</p>
 
-<h2>About Me</h2>
-<p>Hello! I am a Product Engineer with expertise in mechanical design, CAD modeling, sheet metal, die casting, aluminum profiles, and validation through simulation. Below are some of my product engineering and design-related projects.</p>
-<div class="project">
-  <h3>5. Heavy-Duty Glass Handling Rack (400 kg Capacity)</h3>
-<img src="images/glass_rack.jpg" alt="Glass Rack Design" />
-<p><strong>Description:</strong> Designed and manufactured a heavy‑duty glass rack capable of safely handling up to <strong>400 kg</strong> glass sheets. The rack includes a reinforced tubular frame structure, engineered load-bearing supports, and anti-slip base to ensure safe storage and movement.</p>
-<p><strong>Features:</strong></p>
-<ul>
-<li>Designed using structural steel sections for high strength.</li>
-<li>Equipped with <strong>2 multi‑direction wheels</strong> for easy maneuvering.</li>
-<li>Includes <strong>2 stopper wheels</strong> to lock the rack and prevent movement during loading/unloading.</li>
-<li>Optimized support base ensures uniform load distribution for glass sheets.</li>
-<li>Transparent 3D visualization of glass placement for safety inspection.</li>
-</ul>
-<p><strong>Tools:</strong> SolidWorks</p>
-<p><strong>Key Skills:</strong> Structural design, load calculation, weldment design, mechanical safety standards</p>
-</div>
+    <h2 id="projects">Projects</h2>
+    <div class="projects">
 
+      <div class="project">
+        <img src="images/glass_rack.jpg" alt="Glass Rack" />
+        <h3>Heavy-Duty Glass Handling Rack (400 kg)</h3>
+        <p>Designed and fabricated a steel rack capable of transporting 400 kg glass sheets safely.</p>
+        <ul>
+          <li>2 multi-direction wheels for flexible movement</li>
+          <li>2 stopper wheels for stable locking</li>
+          <li>Reinforced structural base for load distribution</li>
+        </ul>
+        <p><strong>Tools:</strong> SolidWorks</p>
+      </div>
 
-</div>
+    </div>
 
+    <h2 id="contact">Contact</h2>
+    <p>Email: <a href="mailto:hrishikeshjarang1256@gmail.com">hrishikeshjarang1256@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/hrishikesh-jarang-3b18351a9/">hrishikesh-jarang-3b18351a9</a></p>
+    <p>Phone: <a href="tel:+919423833047">+91-9423833047</a></p>
 
-<footer>
-<p>© 2025 My Product Engineering Portfolio</p>
-</footer>
+  </div>
+
+  <footer>
+    © 2025 My Product Engineering Portfolio
+  </footer>
 </body>
 </html>
-
-<h2>Projects</h2>
