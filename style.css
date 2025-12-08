@@ -1,5 +1,10 @@
 /* style.css */
 
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Body */
 body {
   margin: 0;
@@ -35,7 +40,7 @@ nav a:hover {
 
 /* Header */
 header {
-  padding: 5rem 2rem 4rem;
+  padding: 6rem 2rem 4rem; /* extra top padding for navbar */
   text-align: center;
   background: linear-gradient(to bottom, #111, #333);
   color: white;
@@ -43,6 +48,10 @@ header {
 header h1 {
   font-size: 2.6rem;
   margin-bottom: 0.5rem;
+  transition: color 0.2s ease;
+}
+header h1:hover {
+  color: #ddd;
 }
 header p {
   font-size: 1.2rem;
@@ -90,6 +99,12 @@ h2 {
   border-radius: 8px;
   margin-bottom: 10px;
 }
+.project h3 {
+  transition: color 0.2s ease;
+}
+.project h3:hover {
+  color: #111;
+}
 ul {
   padding-left: 18px;
   margin: 0.5rem 0;
@@ -126,4 +141,14 @@ footer {
     font-size: 1rem;
   }
 }
+
+@media (max-width: 500px) {
+  .projects {
+    grid-template-columns: 1fr; /* single column on very small screens */
+  }
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
 
