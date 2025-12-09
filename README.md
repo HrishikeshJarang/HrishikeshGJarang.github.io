@@ -35,7 +35,7 @@ I enjoy converting real-world engineering problems into manufacturable and relia
 
 ## 🖼️ Image Assets  
 All project-related images are stored in:  
-📁 `assets/images/`  
+📁 `images/`  
 Organized by project folder.
 
 ---
